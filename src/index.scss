@@ -1,6 +1,11 @@
 body{
     // background: url(./11.png);
     #app{
-        color: red
+        color: red;
+        .jsx{
+            color: yellow;
+            font-size: 40px;
+            font-weight: bold;
+        }
     }
 }

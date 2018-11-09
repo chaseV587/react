@@ -44,6 +44,45 @@ class ES6Component extends React.Component{
         super(props);
         this.state = {
             name: 'Rosen',
+            nowTime: new Date().toLocaleTimeString()
+        }
+    }
+    render() {
+        setInterval(() => {
+            this.setState({
+                nowTime: new Date().toLocaleTimeString()
+            })
+
+        }, 1000);
+        return (
+            <div>
+                <h1>I am {this.state.name} in es6</h1>
+                <h2>Now is {this.state.nowTime}</h2>
+            </div>
+        )
+    }
+}
+
+ReactDOM.render(
+    <div>
+        <Component/>
+        <ES6Component/>
+    </div>,
+    document.getElementById('app')
+);
+
+
+// 事件处理
+
+function Component() {
+    return <h1>I am Chase</h1>
+}
+
+class ES6Component extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            name: 'Rosen',
             nowTime: new Date().toLocaleTimeString(),
             age:18
         }

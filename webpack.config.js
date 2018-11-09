@@ -77,6 +77,7 @@ module.exports = {
         })
     ],
     devServer: {
-        port: 8086
+        port: 8086, // 端口号（默认8080） 
+        // autoOpenBrowser: true //是否自动打开浏览器 
     },
 };
