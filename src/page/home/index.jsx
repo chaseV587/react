@@ -1,10 +1,15 @@
 import React from 'react';
 
+import PageTitle    from 'component/page-title/index.jsx';
+import './index.scss'
+
 class Home extends React.Component{
-    render() {
+    render(){
         return (
-            <div>Home</div>
-        )
+            <div id="page-wrapper">
+                <PageTitle title="首页1233" />
+            </div>
+        );
     }
 }
 
