@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom'
+import { HashRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom'
 
 import Layout from 'component/layout/index.jsx'
 // 页面
 import Home from 'page/home/index.jsx'
+import Login from 'page/login/index.jsx';
 
 class App extends React.Component{
     // 构造函数
@@ -12,14 +13,20 @@ class App extends React.Component{
         super(props)
     }
     render() {
+        let LayoutRouter = (
+            <Layout> 
+                <Switch>
+                    <Route exact path="/home" component={Home}/>
+                    <Route path="/product" component={Home}/>
+                </Switch>
+            </Layout>
+        );
         return (
             <Router>
-                <Layout> 
-                    <Switch>
-                        <Route exact path="/" component={Home}/>
-                        <Redirect from="*" to="/"/>
-                    </Switch>
-                </Layout>
+                <Switch>
+                    <Route path="/login" component={Login}/>
+                    <Route path="/" render={ props => LayoutRouter}/>
+                </Switch>
             </Router>
         )
     }
