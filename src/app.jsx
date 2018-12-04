@@ -16,8 +16,7 @@ class App extends React.Component{
         let LayoutRouter = (
             <Layout> 
                 <Switch>
-                    <Route exact path="/home" component={Home}/>
-                    <Route path="/product" component={Home}/>
+                    <Route exact path="/" component={Home}/>
                 </Switch>
             </Layout>
         );

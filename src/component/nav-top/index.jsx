@@ -1,17 +1,17 @@
 
 import React        from 'react';
 import { Link }     from 'react-router-dom';
-// import MUtil        from 'util/mm.jsx'
-// import User         from 'service/user-service.jsx'
+import MUtil        from 'util/mm.jsx'
+import User         from 'service/user-service.jsx'
 
-// const _mm   = new MUtil();
-// const _user = new User();
+const _mm   = new MUtil();
+const _user = new User();
 
 class NavTop extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            username: 'Chase'
+            username: _mm.getStorage('userInfo').username || ''
         }
     }
     // 退出登录
