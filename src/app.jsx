@@ -6,6 +6,7 @@ import Layout from 'component/layout/index.jsx'
 // 页面
 import Home from 'page/home/index.jsx'
 import Login from 'page/login/index.jsx';
+import ErrorPage from 'page/error/index.jsx';
 
 class App extends React.Component{
     // 构造函数
@@ -17,6 +18,7 @@ class App extends React.Component{
             <Layout> 
                 <Switch>
                     <Route exact path="/" component={Home}/>
+                    <Route component={ErrorPage}/>
                 </Switch>
             </Layout>
         );
