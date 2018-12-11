@@ -16,16 +16,16 @@ class ProductSave extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            id                  : this.props.match.params.pid,
-            name                : '',
-            subtitle            : '',
-            categoryId          : 0,
-            parentCategoryId    : 0,
-            subImages           : [],
-            price               : '',
-            stock               : '',
-            detail              : '',
-            status              : 1 //商品状态1为在售
+            id: this.props.match.params.pid,
+            name: '',
+            subtitle: '',
+            categoryId: 0,
+            parentCategoryId: 0,
+            subImages: [],
+            price: '',
+            stock: '',
+            detail: '',
+            status: 1 //商品状态1为在售
         }
     }
     componentDidMount(){
@@ -79,11 +79,11 @@ class ProductSave extends React.Component{
     }
     // 删除图片
     onImageDelete(e){
-        let index       = parseInt(e.target.getAttribute('index')),
-            subImages   = this.state.subImages;
+        let index = parseInt(e.target.getAttribute('index')),
+            subImages = this.state.subImages;
         subImages.splice(index, 1);
         this.setState({
-            subImages : subImages
+            subImages: subImages
         });
     }
     // 富文本编辑器的变化
@@ -98,14 +98,14 @@ class ProductSave extends React.Component{
     // 提交表单
     onSubmit(){
         let product = {
-            name        : this.state.name,
-            subtitle    : this.state.subtitle,
-            categoryId  : parseInt(this.state.categoryId),
-            subImages   : this.getSubImagesString(),
-            detail      : this.state.detail,
-            price       : parseFloat(this.state.price),
-            stock       : parseInt(this.state.stock),
-            status      : this.state.status
+            name: this.state.name,
+            subtitle: this.state.subtitle,
+            categoryId: parseInt(this.state.categoryId),
+            subImages: this.getSubImagesString(),
+            detail: this.state.detail,
+            price: parseFloat(this.state.price),
+            stock: parseInt(this.state.stock),
+            status: this.state.status
         },
         productCheckResult = _product.checkProduct(product);
         if(this.state.id){
