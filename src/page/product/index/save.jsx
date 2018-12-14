@@ -1,16 +1,16 @@
 
-import React                from 'react';
-import MUtil                from 'util/mm.jsx'
-import Product              from 'service/product-service.jsx'
-import PageTitle            from 'component/page-title/index.jsx';
-import CategorySelector     from './category-selector.jsx';
-import FileUploader         from 'util/file-uploader/index.jsx'
-import RichEditor           from 'util/rich-editor/index.jsx'
+import React from 'react';
+import MUtil from 'util/mm.jsx'
+import Product from 'service/product-service.jsx'
+import PageTitle from 'component/page-title/index.jsx';
+import CategorySelector from './category-selector.jsx';
+import FileUploader from 'util/file-uploader/index.jsx'
+import RichEditor from 'util/rich-editor/index.jsx'
 
 import './save.scss';
 
-const _mm           = new MUtil();
-const _product      = new Product();
+const _mm = new MUtil();
+const _product = new Product();
 
 class ProductSave extends React.Component{
     constructor(props){
